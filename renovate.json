@@ -3,13 +3,11 @@
     "extends": ["config:base"],
     "regexManagers": [
     {
-        "fileMatch": ["^test$"],
+        "fileMatch": ["^Dockerfile$"],
         "matchStrings": [
-            "version=(?<currentValue>.*?)\n",
-            "checksum=(?<currentDigest>.*?)\n"
+            "ENV VAULT_VERSION (?<currentValue>.*?)\n"
         ],
-            "matchStringsStrategy": "combination",
-            "depNameTemplate": "prometheus/node_exporter",
+            "depNameTemplate": "hashicorp/vault",
             "datasourceTemplate": "github-releases",
             "extractVersionTemplate": "^v(?<version>.*)$"
         }
