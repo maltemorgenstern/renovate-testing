@@ -8,8 +8,7 @@
             "ENV VAULT_VERSION (?<currentValue>.*?)\n"
         ],
             "depNameTemplate": "hashicorp/vault",
-            "datasourceTemplate": "github-releases",
-            "extractVersionTemplate": "^v(?<version>.*)$"
+            "datasourceTemplate": "github-releases"
         }
     ]
 }
