@@ -8,7 +8,8 @@
                 "ENV OPA_VERSION (?<currentValue>.*?)\n"
             ],
             "depNameTemplate": "open-policy-agent/opa",
-            "datasourceTemplate": "github-releases"
+            "datasourceTemplate": "github-releases",
+            "extractVersionTemplate": "^v(?<version>.*)$"
         }
     ]
 }
