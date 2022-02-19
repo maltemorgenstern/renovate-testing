@@ -2,12 +2,12 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": ["config:base"],
     "regexManagers": [
-    {
-        "fileMatch": ["^Dockerfile$"],
-        "matchStrings": [
-            "ENV VAULT_VERSION (?<currentValue>.*?)\n"
-        ],
-            "depNameTemplate": "hashicorp/vault",
+        {
+            "fileMatch": ["^Dockerfile$"],
+            "matchStrings": [
+                "ENV OPA_VERSION (?<currentValue>.*?)\n"
+            ],
+            "depNameTemplate": "open-policy-agent/opa",
             "datasourceTemplate": "github-releases"
         }
     ]
