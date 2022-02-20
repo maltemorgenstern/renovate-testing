@@ -5,8 +5,10 @@
         {
             "fileMatch": ["^Dockerfile$"],
             "matchStrings": [
-                "ENV OPA_VERSION (?<currentValue>.*?)\n"
+                "ENV OPA_VERSION (?<currentValue>.*?)\n",
+                "ENV OPA_CHECKSUM (?<currentDigest>.*?)\n"
             ],
+            "matchStringsStrategy": "combination",
             "depNameTemplate": "open-policy-agent/opa",
             "datasourceTemplate": "github-releases",
             "extractVersionTemplate": "^v(?<version>.*)$"
